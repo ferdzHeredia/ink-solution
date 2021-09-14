@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import TabView from './components/Tab'
+import Products from './components/Products'
+import HeaderTab from './components/Header'
+import ProductData from './components/ProductData'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header p-col-12">
+     <HeaderTab/>
+     {/* <TabView/> */}
       </header>
+      {/* <Products/> */}
+      <ProductData/>
     </div>
   );
 }
