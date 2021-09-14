@@ -1,19 +1,20 @@
 // import logo from './logo.svg';
-import './App.css';
-import TabView from './components/Tab'
-import Products from './components/Products'
+
+// import Products from './components/Products'
 import HeaderTab from './components/Header'
-import ProductData from './components/ProductData'
+// import ProductData from './components/ProductData'
+import ProductList from './components/CardDetails'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header p-col-12">
      <HeaderTab/>
      {/* <TabView/> */}
       </header>
+      {/* <ProductList/> */}
       {/* <Products/> */}
-      <ProductData/>
+      {/* <ProductData/> */}
     </div>
   );
 }

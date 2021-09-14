@@ -1,7 +1,8 @@
 import React from "react";
 import HomeTab from "./Home";
 import AboutTab from "./About";
-import ProductsTab from "./Products";
+import ProductList from './CardDetails'
+//import ProductsTab from "./Products";
 import ContactTab from "./ContactUs";
 import classes from "./Header.module.css";
 import {
@@ -12,7 +13,6 @@ import {
   // useRouteMatch,
   // useParams
 } from "react-router-dom";
-import "./TabViewDemo.css";
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
@@ -23,8 +23,8 @@ export default function App() {
     <Router>
       <div  className="p-col-12">
         <ul className={classes.topnav}>
-          <li leftIcon="pi pi-ellipsis-v">
-            <Link leftIcon="pi pi-home" to="/home">Home</Link>
+          <li>
+            <Link  to="/home">Home</Link>
           </li>
           <li>
             <Link to="/products">Products</Link>
@@ -65,7 +65,7 @@ function About() {
   return <AboutTab />;
 }
 function Products() {
-  return <ProductsTab />;
+  return <ProductList />;
 }
 function Contact() {
   return (
