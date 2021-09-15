@@ -18,36 +18,41 @@ const ContactUs = () => {
   const toast = useRef(null);
   const [result, showResult] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
     let status = true;
 
-    emailjs
-      .sendForm(
-        "service_lxa9p3s",
-        "template_g3tkoeb",
-        e.target,
-        "user_qcjsnmbpDqqXLxyJLXcG6"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-          status = false;
-        }
-      );
+    await (async () => {
+      await emailjs
+        .sendForm(
+          "service_lxa9p3s",
+          "template_g3tkoeb",
+          e.target,
+          "user_qcjsnmbpDqqXLxyJLXcG6"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+            status = false;
+          }
+        );
+    })();
+
     e.target.reset();
     showMessage(status);
   };
   const showMessage = (status) => {
     toast.current.show({
       severity: status ? "success" : "error",
-      summary: "Success Message",
-      detail: "Message Content",
-      life: 3000,
+      summary: status ? "Success" : "Error",
+      detail: status
+        ? "Your Message was sent successfully"
+        : "There was an error while sending your message, try again later",
+      life: 5000,
     });
   };
 
