@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "font-awesome/css/font-awesome.min.css";
+// import "font-awesome/css/font-awesome.min.css";
 import { Toast } from "primereact/toast";
 import { Button } from "primereact/button";
 import "./ToastDemo.css";
@@ -15,20 +15,13 @@ const Result = () => {
 };
 
 const ContactUs = () => {
-
-  const showSuccess = () => {
-    toast.current.show({
-      severity: "success",
-      summary: "Success Message",
-      detail: "Message Content",
-      life: 3000,
-    });
-  };
   const toast = useRef(null);
   const [result, showResult] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    let status = true;
 
     emailjs
       .sendForm(
@@ -43,10 +36,19 @@ const ContactUs = () => {
         },
         (error) => {
           console.log(error.text);
+          status = false;
         }
       );
     e.target.reset();
-    showResult(true);
+    showMessage(status);
+  };
+  const showMessage = (status) => {
+    toast.current.show({
+      severity: status ? "success" : "error",
+      summary: "Success Message",
+      detail: "Message Content",
+      life: 3000,
+    });
   };
 
   return (
@@ -54,11 +56,7 @@ const ContactUs = () => {
       <div>
         <Toast ref={toast} />
         <h5>Severities</h5>
-        <Button
-          label="Success"
-          className="p-button-success"
-          onClick={showSuccess}
-        />
+
         <div className="contactme" id="contact">
           <div className="contactOverlay">
             <div className="container">
@@ -101,7 +99,9 @@ const ContactUs = () => {
                       <div className="submitButton">
                         <button>SUBMIT</button>
                       </div>
-                      <div className="row">{result ? <showSuccess /> : null}</div>
+                      <div className="row">
+                        {result ? <showSuccess /> : null}
+                      </div>
                     </div>
                   </div>
                 </form>
