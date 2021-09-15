@@ -115,19 +115,18 @@ main {
 /*---------------------------------------------------------*/
 .contactme {
   width: 100%;
-  background-image: url("http://www.mmasynergy.com/images/inner-banner.jpg");
+  background-image: url("./ProductImages/contact.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 5%;
+  background-size: 77rem;
 }
 .contactOverlay {
   width: 100%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
 .form {
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,7 +138,9 @@ main {
   align-items: center;
 }
 form {
-  width: 80%;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,17 +152,18 @@ form {
   border-radius: 20px;
 }
 form button {
-  width: 190px;
-  height: 55px;
+  width: 120px;
+  height: 45px;
   border: 0;
   border-radius: 5px;
-  background-color: #001517;
+  background-color: teal;
   -webkit-transition: 0.5s linear;
   -o-transition: 0.5s linear;
   transition: 0.5s linear;
   color: white;
   font-weight: bold;
-  margin-top: 20%;
+    text-align: center;
+  /* padding-left: 3%; */
 }
 form button:hover {
   background-color: unset;
@@ -172,8 +174,14 @@ form button:hover {
   color: black;
 }
 .formWord {
-  width: 40%;
-  padding: 4%;
+  text-align: center;
+  margin: 0 auto; 
+  margin-bottom: .5rem;
+}
+.submitButton{
+  text-align: center;
+  margin: 0 auto;
+  font-family: sans-serif;
 }
 .formWord h2 {
   font-size: 35px;
@@ -181,18 +189,18 @@ form button:hover {
   margin-bottom: 10%;
 }
 .formWord input {
-  width: 100%;
-  height: 50px;
+  width: 16rem;
+  height: 40px;
   margin-bottom: 10%;
   border: 0;
   margin-top: 2%;
-  padding-left: 3%;
   background: #ffffff;
   -webkit-box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
   box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
 }
 .formWord textarea {
-  width: 100%;
+font-family: sans-serif;
+  width: 16rem;
   margin-bottom: 10%;
   border: 0;
   margin-top: 2%;
@@ -200,7 +208,7 @@ form button:hover {
   color: black;
   -webkit-box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
   box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
-  padding-left: 3%;
+  /* padding-left: 3%; */
 }
 /*---------------------------------------------------------*/
 /* CONTACT ME END                                */

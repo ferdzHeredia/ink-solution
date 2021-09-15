@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import './ContactUs.css'
+import { Card } from "primereact/card";
 import emailjs from 'emailjs-com';
 
 const Result = () =>{
@@ -25,42 +26,44 @@ const ContactUs = () => {
   }
 
   return (
+    <Card className="p-col-6" style={{ margin: "auto", marginTop: "1rem"}}>
     <div>
-      <div class="contactme" id="contact">
-      <div class="contactOverlay">
-        <div class="container">
-          <div class="form">
+      <div className="contactme" id="contact">
+      <div className="contactOverlay">
+        <div className="container">
+          <div className="form">
             <form action="" onSubmit={sendEmail}>
-              <div class="formWord">
-                <h2>Say Hello!</h2>
+              <div className="formWord">
+                <h2>Contact Us!</h2>
                 <span>Full Name</span>
                 <br />
-                <input class="input100" type="text" name="fullName" required />
+                <input className="input100" type="text" name="fullName" required />
                 <br />
                 <span>Phone Number</span>
                 <br />
-                <input class="input100" type="text" name="phone" required />
+                <input className="input100" type="text" name="phone" required />
                 <br />
                 <span>Enter Email</span>
                 <br />
-                <input class="input100" type="text" name="email" required />
+                <input className="input100" type="text" name="email" required />
                 <br />
-              </div>
-              <div class="formWord">
+                <div className="formWord">
                 <span>Message</span>
                 <br />
                 <textarea name="message" required></textarea>
                 <br />
-                <button>SUBMIT</button>
-
-                <div class="row">{result ? <Result/>: null}</div>
+                <div className="submitButton"><button >SUBMIT</button></div>
+                <div className="row">{result ? <Result/>: null}</div>
               </div>
+              </div>
+             
             </form>
           </div>
         </div>
       </div>
     </div>
     </div>
+    </Card>
   );
 };
 
