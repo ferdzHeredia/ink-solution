@@ -24,7 +24,7 @@ export default function App() {
     <Router>
       <div>
         <div>
-          <a href="#" className={classes.toggleButton}>
+          <a href="/home" className={classes.toggleButton}>
             <span className={classes.bar}></span>
             <span className={classes.bar}></span>
             <span className={classes.bar}></span>

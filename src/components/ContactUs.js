@@ -1,21 +1,21 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 // import "font-awesome/css/font-awesome.min.css";
 import { Toast } from "primereact/toast";
 import { Button } from "primereact/button";
 import "./ToastDemo.css";
-
 import "./ContactUs.css";
 import { Card } from "primereact/card";
 import emailjs from "emailjs-com";
 
 const ContactUs = () => {
+
   const toast = useRef(null);
-  const [result, showResult] = useState(false);
+  let status = false
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    let status = true;
+    status = true;
 
     await (async () => {
       await emailjs
@@ -55,24 +55,35 @@ const ContactUs = () => {
     <Card>
       <Toast ref={toast} />
       <div className="p-grid nested-grid p-justify-center	">
-        <div className="contactme p-col-12 p-md-12 p-lg-6 p-sm-12 " id="contact">
+        <div className="contactme p-col-12 p-md-8 p-lg-5 p-sm-12" id="contact">
           <div className="p-grid p-justify-center">
-            <div className="container p-col-6 ">
-              <div className="p-col-9 ">
+            <div className="container p-col-6 p-justify-center">
+              <div className="">
                 <form action="" onSubmit={sendEmail}>
-                  <div className="formWord p-col ">
+                  <div className="formWord p-col p-sm-10 ">
                     <h2>CONTACT US</h2>
                     <span>Full Name</span>
                     <br />
-                    <input type="text" name="fullName" required />
+                    <input
+                      className="p-col-12 p-md-12 p-lg-12 p-sm-12 p-justify-center"
+                      type="text"
+                      name="fullName"
+                      required
+                    />
                     <br />
                     <span>Phone Number</span>
                     <br />
-                    <input type="text" name="phone" required />
+                    <input
+                      className="p-col-12 p-md-12 p-lg-12 p-sm-12 p-justify-center"
+                      type="text"
+                      name="phone"
+                      required
+                    />
                     <br />
                     <span>Enter Email</span>
                     <br />
                     <input
+                      className="p-col-12 p-md-12 p-lg-12 p-sm-12 p-justify-center"
                       autoComplete="off"
                       type="text"
                       name="email"
@@ -82,11 +93,13 @@ const ContactUs = () => {
                     <span>Message</span>
                     <br />
                     <textarea name="message" required></textarea>
-                    <div className="formWord">
+                    <div className="p-col-12 p-md-12 p-lg-12 p-sm-12 formWord">
                       <br />
-                      <Button style={{backgroundColor: "teal"}}>SUBMIT</Button>
-                      <div className=" p-col">
-                        {result ? <showSuccess /> : null}
+                      <Button style={{ backgroundColor: "teal" }}>
+                        SUBMIT
+                      </Button>
+                      <div>
+                        {status ? <showSuccess /> : null}
                       </div>
                     </div>
                   </div>
