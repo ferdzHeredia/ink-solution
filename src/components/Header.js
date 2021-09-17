@@ -1,7 +1,7 @@
 import React from "react";
 import HomeTab from "./Home";
 import AboutTab from "./About";
-import ProductList from './ProductList'
+import ProductList from "./ProductList";
 //import ProductsTab from "./Products";
 import ContactTab from "./ContactUs";
 import classes from "./Header.module.css";
@@ -19,24 +19,33 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 
 export default function App() {
-  return (
-    <Router>
-      <div  className="p-col-12">
-        <ul className={classes.topnav}>
-          <li>
-            <Link  to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/products">Products</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Us</Link>
-          </li>
-        </ul>
+  
 
+  return (
+    
+    <Router>
+      <div>
+        <div>
+          <a href="#" className={classes.toggleButton}>
+            <span className={classes.bar}></span>
+            <span className={classes.bar}></span>
+            <span className={classes.bar}></span>
+          </a>
+          <ul className={classes.topnav}>
+            <li className={classes.home}>
+              <Link to="/home">Home</Link>
+            </li>
+            <li className={classes.link}>
+              <Link to="/products">Products</Link>
+            </li>
+            <li className={classes.link}>
+              <Link to="/about">About</Link>
+            </li>
+            <li className={classes.link}>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+          </ul>
+        </div>
         <Switch>
           <Route path="/about">
             <About />
@@ -52,7 +61,6 @@ export default function App() {
           </Route>
         </Switch>
       </div>
-      
     </Router>
   );
 }

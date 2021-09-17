@@ -1,20 +1,21 @@
 import React, { useState, useRef } from "react";
 import "font-awesome/css/font-awesome.min.css";
 import { Toast } from "primereact/toast";
-import { Button } from "primereact/button";
 import "./ToastDemo.css";
 
 import "./ContactUs.css";
 import { Card } from "primereact/card";
 import emailjs from "emailjs-com";
 
-const Result = () => {
-  return (
-    <p> Your Message has been successfully sent. You will be contacted soon</p>
-  );
-};
-
 const ContactUs = () => {
+
+  //listen for window resize event
+  // window.addEventListener("resize", function (event) {
+  //   var newWidth = window.innerWidth;
+  //   var newHeight = window.innerHeight;
+  //   console.log(newWidth)
+  // });
+  
 
   const showSuccess = () => {
     toast.current.show({
@@ -24,12 +25,11 @@ const ContactUs = () => {
       life: 3000,
     });
   };
+
   const toast = useRef(null);
-  const [result, showResult] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_lxa9p3s",
@@ -45,71 +45,54 @@ const ContactUs = () => {
           console.log(error.text);
         }
       );
+
     e.target.reset();
-    showResult(true);
+    showSuccess();
   };
 
   return (
-    <Card className="p-col-6" style={{ margin: "auto", marginTop: "1rem" }}>
-      <div>
-        <Toast ref={toast} />
-        <h5>Severities</h5>
-        <Button
-          label="Success"
-          className="p-button-success"
-          onClick={showSuccess}
-        />
-        <div className="contactme" id="contact">
-          <div className="contactOverlay">
-            <div className="container">
-              <div className="form">
-                <form action="" onSubmit={sendEmail}>
+    // className="p-col-12" style={{ margin: "auto", marginTop: "1rem" }}
+    <Card >
+      <Toast ref={toast} />
+      <div className="p-col-4 p-col-xs-12 p-col-sm-12 ">
+      <div className="contactme" id="contact">
+        <div className="contactOverlay">
+          <div className="container">
+            <div className="form">
+              <form action="" onSubmit={sendEmail}>
+                <div className="formWord">
+                  <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>
+                    CONTACT US
+                  </h2>
+                  <span>Full Name</span>
+                  <br />
+                  <input type="text" name="fullName" required />
+                  <br />
+                  <span>Phone Number</span>
+                  <br />
+                  <input type="text" name="phone" required />
+                  <br />
+                  <span>Enter Email</span>
+                  <br />
+                  <input type="text" name="email" required />
+                  <br />
                   <div className="formWord">
-                    <h2>Contact Us!</h2>
-                    <span>Full Name</span>
+                    <span>Message</span>
                     <br />
-                    <input
-                      className="input100"
-                      type="text"
-                      name="fullName"
-                      required
-                    />
+                    <textarea name="message" required></textarea>
                     <br />
-                    <span>Phone Number</span>
-                    <br />
-                    <input
-                      className="input100"
-                      type="text"
-                      name="phone"
-                      required
-                    />
-                    <br />
-                    <span>Enter Email</span>
-                    <br />
-                    <input
-                      className="input100"
-                      type="text"
-                      name="email"
-                      required
-                    />
-                    <br />
-                    <div className="formWord">
-                      <span>Message</span>
-                      <br />
-                      <textarea name="message" required></textarea>
-                      <br />
-                      <div className="submitButton">
-                        <button>SUBMIT</button>
-                      </div>
-                      <div className="row">{result ? <showSuccess /> : null}</div>
+                    <div className="submitButton">
+                      <button>SUBMIT</button>
                     </div>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
+      </div>
+      
     </Card>
   );
 };
