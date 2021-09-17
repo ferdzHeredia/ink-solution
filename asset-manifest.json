@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/http//:ferdzHeredia.github.io/ink-solution/static/css/main.b8b74fc9.chunk.css",
+    "main.js": "/http//:ferdzHeredia.github.io/ink-solution/static/js/main.c5dc84db.chunk.js",
+    "main.js.map": "/http//:ferdzHeredia.github.io/ink-solution/static/js/main.c5dc84db.chunk.js.map",
+    "runtime-main.js": "/http//:ferdzHeredia.github.io/ink-solution/static/js/runtime-main.8f0ff287.js",
+    "runtime-main.js.map": "/http//:ferdzHeredia.github.io/ink-solution/static/js/runtime-main.8f0ff287.js.map",
+    "static/css/2.948b30e0.chunk.css": "/http//:ferdzHeredia.github.io/ink-solution/static/css/2.948b30e0.chunk.css",
+    "static/js/2.51a78fcf.chunk.js": "/http//:ferdzHeredia.github.io/ink-solution/static/js/2.51a78fcf.chunk.js",
+    "static/js/2.51a78fcf.chunk.js.map": "/http//:ferdzHeredia.github.io/ink-solution/static/js/2.51a78fcf.chunk.js.map",
+    "static/js/3.9b40889f.chunk.js": "/http//:ferdzHeredia.github.io/ink-solution/static/js/3.9b40889f.chunk.js",
+    "static/js/3.9b40889f.chunk.js.map": "/http//:ferdzHeredia.github.io/ink-solution/static/js/3.9b40889f.chunk.js.map",
+    "index.html": "/http//:ferdzHeredia.github.io/ink-solution/index.html",
+    "static/css/2.948b30e0.chunk.css.map": "/http//:ferdzHeredia.github.io/ink-solution/static/css/2.948b30e0.chunk.css.map",
+    "static/css/main.b8b74fc9.chunk.css.map": "/http//:ferdzHeredia.github.io/ink-solution/static/css/main.b8b74fc9.chunk.css.map",
+    "static/js/2.51a78fcf.chunk.js.LICENSE.txt": "/http//:ferdzHeredia.github.io/ink-solution/static/js/2.51a78fcf.chunk.js.LICENSE.txt",
+    "static/media/ContactUs.css": "/http//:ferdzHeredia.github.io/ink-solution/static/media/contact.c0af1c19.jpg",
+    "static/media/Header.module.css": "/http//:ferdzHeredia.github.io/ink-solution/static/media/gradi.6fd884fa.jpg",
+    "static/media/primeicons.css": "/http//:ferdzHeredia.github.io/ink-solution/static/media/primeicons.e61f3495.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f0ff287.js",
+    "static/css/2.948b30e0.chunk.css",
+    "static/js/2.51a78fcf.chunk.js",
+    "static/css/main.b8b74fc9.chunk.css",
+    "static/js/main.c5dc84db.chunk.js"
+  ]
+}
