@@ -20,7 +20,7 @@ const ContactUs = () => {
     await (async () => {
       await emailjs
         .sendForm(
-          "service_lxa9p3s",
+          "service_8lwe87b",
           "template_g3tkoeb",
           e.target,
           "user_qcjsnmbpDqqXLxyJLXcG6"
@@ -52,20 +52,21 @@ const ContactUs = () => {
 
   return (
     // className="p-col-12" style={{ margin: "auto", marginTop: "1rem" }}
-    <Card>
+    <Card  style={{ border: "none", boxShadow: "none" }}>
+      <br/>
       <Toast ref={toast} />
-      <div className="p-grid nested-grid p-justify-center	">
-        <div className="contactme p-col-12 p-md-8 p-lg-5 p-sm-12" id="contact">
+      <div className="p-grid nested-grid p-justify-center" >
+        <div className="contactme p-col-12 p-md-8 p-lg-7 p-sm-12" id="contact">
           <div className="p-grid p-justify-center">
             <div className="container p-col-6 p-justify-center">
-              <div className="">
-                <form action="" onSubmit={sendEmail}>
+              <div>
+                <form  action="" onSubmit={sendEmail} style={{ lineHeight:"30px"}}>
                   <div className="formWord p-col p-sm-10 ">
                     <h2>CONTACT US</h2>
                     <span>Full Name</span>
                     <br />
                     <input
-                      className="p-col-12 p-md-12 p-lg-12 p-sm-12 p-justify-center"
+                      className="p-col-12 p-md-12 p-lg-12 p-sm-12 p-justify-center "
                       type="text"
                       name="fullName"
                       required
@@ -92,12 +93,12 @@ const ContactUs = () => {
                     <br />
                     <span>Message</span>
                     <br />
-                    <textarea name="message" required></textarea>
-                    <div className="p-col-12 p-md-12 p-lg-12 p-sm-12 formWord">
+                    <textarea className="p-col-12 p-md-12 p-lg-12 p-sm-12 " name="message" required></textarea>
+                    <div>
                       <br />
-                      <Button style={{ backgroundColor: "teal" }}>
+                      <Button className="button" style={{ backgroundColor: "teal", borderRadius: "15px" }}>
                         SUBMIT
-                      </Button>
+                      </Button >
                       <div>
                         {status ? <showSuccess /> : null}
                       </div>
@@ -114,3 +115,5 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+// !nk$0luti0n2021
+// service_8lwe87b
