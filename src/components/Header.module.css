@@ -5,7 +5,8 @@ ul.topnav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: teal;
+  background-image: url("./ProductImages/gradi.jpg");
+  /* background-color: teal; */
 }
 ul.home{
   list-style-type: none;

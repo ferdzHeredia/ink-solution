@@ -1,164 +1,54 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,500,600,700|Poppins:300,400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
 
-  body a:hover {
-    text-decoration: none;
-    color: unset;
-  }
   input:focus,
-  select:focus,
-  button:focus,
   textarea:focus {
     outline: none;
   }
-  
-  .container {
-    width: 100%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  /* .App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-  } */
-  /* main {
-    flex-grow: 1;
-  } */
+   
   
   /*---------------------------------------------------------*/
   /* CONTACT ME                               */
   /*---------------------------------------------------------*/
-  .contactme {
-    width: 100%;
+  .contactme { 
     background-image: url("./ProductImages/contact.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 77rem;
   }
-  .contactOverlay {
-    width: 100%;
-    padding-top: 4%;
-    padding-bottom: 4%;
-  }
-  .form {
-    width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
+  
+  
   form {
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    width: 75%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     background-color: white;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 20px;
   }
-  form button {
-    width: 120px;
-    height: 45px;
-    border: 0;
-    border-radius: 5px;
-    background-color: teal;
-    -webkit-transition: 0.5s linear;
-    -o-transition: 0.5s linear;
-    transition: 0.5s linear;
-    color: white;
-    font-weight: bold;
-      text-align: center;
-    /* padding-left: 3%; */
+  
+  .formWord { 
+    text-align: center;  
   }
-  form button:hover {
-    background-color: unset;
-    border: 2px solid #e49504;
-    -webkit-transition: 0.5s linear;
-    -o-transition: 0.5s linear;
-    transition: 0.5s linear;
-    color: black;
-  }
-  .formWord {
-    text-align: center;
-    margin: 0 auto; 
-    margin-bottom: .5rem;
-  }
-  .submitButton{
-    text-align: center;
-    margin: 0 auto;
-    font-family: sans-serif;
-  }
-  .formWord h2 {
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 10%;
-  }
+  
   .formWord input {
-    width: 16rem;
-    height: 40px;
-    margin-bottom: 10%;
+    height: 30px;
+    /* margin-bottom: 5%; */
     border: 0;
-    margin-top: 2%;
+    border-radius: 20px;
+    /* margin-top: 2%; */
     background: #ffffff;
     -webkit-box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
     box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
   }
   .formWord textarea {
-  font-family: sans-serif;
-    width: 16rem;
-    margin-bottom: 10%;
-    border: 0;
-    margin-top: 2%;
-    height: 80px;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 20px;
+    text-align: right;
+    height: 80px; 
     color: black;
     -webkit-box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
-    box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
-    /* padding-left: 3%; */
+    box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);  
   }
   
-  /* @media (max-width: 924px){
   
-form button {
-  width: 90px;
-  height: 45px;
-  border: 0;
-  border-radius: 5px;
-}
-
-
-.formWord input {
-  width: 12rem;
-  height: 40px;
-}
-.formWord textarea {
-font-family: sans-serif;
-  width: 12rem;
-}
-} */
 
 /*---------------------------------------------------------*/
 /* CONTACT ME END                                */

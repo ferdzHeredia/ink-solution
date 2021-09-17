@@ -4,6 +4,7 @@ import AboutTab from "./About";
 import ProductList from "./ProductList";
 //import ProductsTab from "./Products";
 import ContactTab from "./ContactUs";
+import Service from "./Service";
 import classes from "./Header.module.css";
 import {
   BrowserRouter as Router,
@@ -19,10 +20,7 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 
 export default function App() {
-  
-
   return (
-    
     <Router>
       <div>
         <div>
@@ -44,6 +42,9 @@ export default function App() {
             <li className={classes.link}>
               <Link to="/contact">Contact Us</Link>
             </li>
+            <li className={classes.link}>
+              <Link to="/service">Service</Link>
+            </li>
           </ul>
         </div>
         <Switch>
@@ -55,6 +56,9 @@ export default function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/service">
+            <Service />
           </Route>
           <Route path="/">
             <Home />
@@ -79,6 +83,13 @@ function Contact() {
   return (
     <div>
       <ContactTab />
-    </div>
+    </div> 
   );
+  function Service() {
+    return (
+      <div>
+        <Service />
+      </div>
+    );
+};
 }
